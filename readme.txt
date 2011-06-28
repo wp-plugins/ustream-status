@@ -46,7 +46,7 @@ How to install and use it
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Create Ustream account (if you haven't done so)
 1. Upload two (2) images which indicates online and offline status
-1. Go to `Theme` - `Widget` and set up your Ustream channel and enter the image URLs
+1. Go to `Appearance` - `Widget` and set up your Ustream channel and enter the image URLs
 1. Save
 
 This plugin uses cache. You may have to wait for 120 seconds until you see the channel becomes live or offline. Please be patient!
