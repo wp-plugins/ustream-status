@@ -15,13 +15,17 @@ Display the online/offline status of a Ustream channel
 
 == Description ==
 
-"Ustream Status" is a widget plug-in to display the live/offline status of an Ustream channel, using the desired images.
+"Ustream Status" is a widget plug-in to display the live/offline status of a Ustream channel, using the desired images.
 
-Enter your desired Ustream channel, and it will fetch the online/offline status. Then it will display the online/offline status image of your choice.
+Enter a Ustream channel, and it will fetch the online/offline status. Then it will display the online/offline status image of your choice.
 
 Ustream is one of the major live casting service providers that anybody can start a live cast for free or even make money.
 
-Check out the demo at (although you only see it when I'm live.)
+At this point, this Ustream Status only supports one channel per blog. (You can place multiple widgets of one channel.)
+
+You want me to be able to add more? Then I'll wait for your feedback.
+
+SAMPLE SITE (although you only see it when I'm live)
 http://katzueno.com/
 
 I'm looking for your feedback! Please contact me via my website
@@ -99,6 +103,6 @@ If you're still having problem getting the status, you can think of the followin
 
 == Upgrade Notice ==
 
-= 1.0.08 =
+= 1.0.0 =
 
 This is initial version.
