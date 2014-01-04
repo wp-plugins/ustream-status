@@ -8,7 +8,7 @@ Author URI: http://katzueno.com/
 Tags: livecasting, status, ustream, live cast
 License: GPL2
 Requires at least: 2.8.0
-Tested up to: 3.1.3
+Tested up to: 3.8
 Stable tag: 1.0.0
 
 Display the online/offline status of a Ustream channel
