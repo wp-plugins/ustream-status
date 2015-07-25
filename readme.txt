@@ -65,6 +65,7 @@ This plugin uses cache. You may have to wait for 60 seconds until you see the ch
 = Insert a shortcode =
 
 Enter the shortcode as following format
+
 [ustream-status channel="Channel Name" online="Online Image URL" offline="Offline Image URL"]
 
 - Channel Name: Enter the channel name (Or you can enter the full URL of a Ustream channel)
@@ -73,7 +74,7 @@ Enter the shortcode as following format
 
 Shortcode Example:
 
-`[ustream-status account="nasahdtv" online="http://example.com/nasa_online.gif" offline="http://example.com/nasa_offline.gif"]`
+[ustream-status channel="nasahdtv" online="http://example.com/nasa_online.gif" offline="http://example.com/nasa_offline.gif"]
 
 This plugin uses cache. You may have to wait for 60 seconds until you see the channel becomes live or offline. Please be patient!
 
