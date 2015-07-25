@@ -8,8 +8,8 @@ Author URI: http://katzueno.com/
 Tags: livecasting, status, ustream, live cast
 License: GPL2
 Requires at least: 2.8.0
-Tested up to: 3.8
-Stable tag: 1.0.0
+Tested up to: 4.3
+Stable tag: 2.0
 
 Display the online/offline status of a Ustream channel
 
@@ -42,14 +42,37 @@ http://katzueno.com/wordpress/
 
 How to install and use it
 
+## Installation
+
 1. Upload `ustream-status` folder to the `/wp-content/plugins/` directory or you can install from admin panel directly.
 1. Activate the plugin through the 'Plugins' menu in WordPress
+
+## Preparation
+
 1. Create Ustream account (if you haven't done so)
-1. Upload two (2) images which indicates online and offline status
+1. Upload two (2) images which indicates online and offline status, and obtain URL
+
+## Create a widget
+
 1. Go to `Appearance` - `Widget` and set up your Ustream channel and enter the image URLs
 1. Save
 
-This plugin uses cache. You may have to wait for 120 seconds until you see the channel becomes live or offline. Please be patient!
+This plugin uses cache. You may have to wait for 60 seconds until you see the channel becomes live or offline. Please be patient!
+
+## Insert shortcode
+
+Enter the shortcode as following format
+[ustream-status channel="Channel Name" online="Online Image URL" offline="Offline Image URL"]
+
+- Channel Name: Enter the channel name (Or you can enter the full URL of a Ustream channel)
+- Online Image URL: Enter the full path to the online image.
+- Offline Image URL: Enter the full path to the online image.
+
+### Shortcode Example:
+
+`[ustream-status account="nasahdtv" online="http://example.com/nasa_online.gif" offline="http://example.com/nasa_offline.gif"]`
+
+This plugin uses cache. You may have to wait for 60 seconds until you see the channel becomes live or offline. Please be patient!
 
 
 == Frequently Asked Questions ==
@@ -68,7 +91,7 @@ You need to make your own images. I may make preset later if you ask me so.
 
 = I'm live. But my status won't change. =
 
-First, wait for 120 seconds. Ustream Status uses cache. It only check the live/offline status once every 120 seconds.
+First, wait for 60 seconds. Ustream Status uses cache. It only check the live/offline status once every 120 seconds.
 
 If you don't see the change os status after 120 seconds you become live, you may have misspelled your Ustream ID, your WordPress site may be having hard time reaching Ustream Server, or your IP may be blocked from Ustream Server.
 
@@ -97,11 +120,22 @@ If you're still having problem getting the status, you can think of the followin
 
 == Changelog ==
 
-= 1.0.0 = 
+= 2.0.0 =
+
+* Support multiple channel.
+* Support shortcode.
+* Reduced the cache time to 60 sec from 120 sec
+
+= 1.0.0 =
 
 * The initial version. This version should work ok.
 
 == Upgrade Notice ==
+
+= 2.0.0 =
+
+* Support multiple channel.
+* Support shortcode.
 
 = 1.0.0 =
 
