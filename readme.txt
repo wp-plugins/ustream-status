@@ -31,6 +31,9 @@ http://katzueno.com/
 I'm looking for your feedback! Please contact me via my website
 or @katz515 on twitter.
 
+Fork me on GitHub. Pull Requests are always welcome!
+https://github.com/katzueno/UstreamStatus-WordPress
+
 Plug-in Support Page
 http://katzueno.com/wordpress/ustream-status/
 
@@ -42,24 +45,24 @@ http://katzueno.com/wordpress/
 
 How to install and use it
 
-## Installation
+= Installation =
 
 1. Upload `ustream-status` folder to the `/wp-content/plugins/` directory or you can install from admin panel directly.
 1. Activate the plugin through the 'Plugins' menu in WordPress
 
-## Preparation
+= Preparation =
 
 1. Create Ustream account (if you haven't done so)
 1. Upload two (2) images which indicates online and offline status, and obtain URL
 
-## Create a widget
+= Create a widget =
 
 1. Go to `Appearance` - `Widget` and set up your Ustream channel and enter the image URLs
 1. Save
 
 This plugin uses cache. You may have to wait for 60 seconds until you see the channel becomes live or offline. Please be patient!
 
-## Insert shortcode
+= Insert a shortcode =
 
 Enter the shortcode as following format
 [ustream-status channel="Channel Name" online="Online Image URL" offline="Offline Image URL"]
@@ -68,7 +71,7 @@ Enter the shortcode as following format
 - Online Image URL: Enter the full path to the online image.
 - Offline Image URL: Enter the full path to the online image.
 
-### Shortcode Example:
+Shortcode Example:
 
 `[ustream-status account="nasahdtv" online="http://example.com/nasa_online.gif" offline="http://example.com/nasa_offline.gif"]`
 
