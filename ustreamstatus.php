@@ -5,7 +5,7 @@ Plugin Name: Ustream Status
 Plugin URI: http://katzueno.com/wordpress/ustream-status/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R8S6WTYMY9SXG
 Description: Display the online/offline status of a Ustream channel.
-Version: 2.0.0
+Version: 2.0.1
 Author: Katz Ueno
 Author URI: http://katzueno.com/
 Tags: livecasting, status, ustream, live cast
@@ -94,7 +94,7 @@ class wp_ustream_status_widget extends WP_Widget {
 			$opt = stream_context_create(array(
 			'http' => array( 'timeout' => 3 )
 			));
-			$UstStatusSerial = file_get_contents('http://api.ustream.tv/php/channel/' . $account . '/getValueOf/status',0,$opt);
+			$UstStatusSerial = @file_get_contents('http://api.ustream.tv/php/channel/' . $account . '/getValueOf/status',0,$opt);
 			$UstStatusArray = unserialize($UstStatusSerial);
 			set_transient($transientName, $UstStatusArray, 60 );
 		}
@@ -154,7 +154,7 @@ function ustream_status_shortcode($atts) {
         $opt = stream_context_create(array(
         'http' => array( 'timeout' => 3 )
         ));
-        $UstStatusSerial = file_get_contents('http://api.ustream.tv/php/channel/' . $account . '/getValueOf/status',0,$opt);
+        $UstStatusSerial = @file_get_contents('http://api.ustream.tv/php/channel/' . $account . '/getValueOf/status',0,$opt);
         $UstStatusArray = unserialize($UstStatusSerial);
         set_transient($transientName, $UstStatusArray, 60 );
     }

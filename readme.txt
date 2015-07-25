@@ -123,6 +123,10 @@ If you're still having problem getting the status, you can think of the followin
 
 == Changelog ==
 
+= 2.0.1 =
+
+* Fix the `Warning: file_get_contents(http://api.ustream.tv/php/channel/wotstv/getValueOf/status) [function.file-get-contents]: failed to open stream: no suitable wrapper could be found in /path/to/wordpress/wp-content/plugins/ustream-status/ustreamstatus.php on line 96.` error
+
 = 2.0.0 =
 
 * Support multiple channel.
@@ -134,6 +138,10 @@ If you're still having problem getting the status, you can think of the followin
 * The initial version. This version should work ok.
 
 == Upgrade Notice ==
+
+= 2.0.1 =
+
+* Fix the `Warning: file_get_contents(http://api.ustream.tv/php/channel/wotstv/getValueOf/status) [function.file-get-contents]: failed to open stream: no suitable wrapper could be found in /path/to/wordpress/wp-content/plugins/ustream-status/ustreamstatus.php on line 96.` error
 
 = 2.0.0 =
 
