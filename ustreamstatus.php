@@ -5,7 +5,7 @@ Plugin Name: Ustream Status
 Plugin URI: http://katzueno.com/wordpress/ustream-status/
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=R8S6WTYMY9SXG
 Description: Display the online/offline status of a Ustream channel.
-Version: 2.0.1
+Version: 2.0.2
 Author: Katz Ueno
 Author URI: http://katzueno.com/
 Tags: livecasting, status, ustream, live cast
@@ -139,7 +139,7 @@ class wp_ustream_status_widget extends WP_Widget {
 }
 
 // ============================================================
-// Registering plug-ins
+// Registering shortcode
 // [ustream-status online='online image URL' offline='offline image URL' account='http://www.ustream.tv/concrete5japan']
 // ============================================================
 function ustream_status_shortcode($atts) {
@@ -173,24 +173,32 @@ function ustream_status_shortcode($atts) {
         break;
         }
     if ($UstStatus == 1) {
-    ?>
-        <a href="http://www.ustream.tv/channel/<?php echo $account;?>" alt="<?php _e('Click here to visit the Ustream channel'); ?>" target="_blank">
-        <img src="<?php echo $online; ?>" alt="<?php _e('Live now'); ?>" target="_blank" />
-        </a>
-    <?php
+	    $output = '<a href="http://www.ustream.tv/channel/';
+	    $output .= $account;
+	    $output .= '" alt="';
+	    $output .= __('Click here to visit the Ustream channel');
+	    $output .= '" target="_blank"><img src="';
+	    $output .= $online;
+	    $output .='" alt="';
+	    $output .= __('Live now');
+	    $output .= '" target="_blank" /></a>';
     // ONLINE part ends here
     }
     else if ($UstStatus == 2) {
         // If not live, including when the API does not respond
-        ?>
-        <a href="http://www.ustream.tv/channel/<?php echo $account;?>" alt="<?php _e('Click here to visit the Ustream channel'); ?>" target="_blank">
-        <img src="<?php echo $offline; ?>" alt="<?php _e('Offline'); ?>" />
-        </a>
-    <?php } else {
-        echo _e('Error occured. We could not retrieve the data from Ustream.');
+	    $output = '<a href="http://www.ustream.tv/channel/';
+	    $output .= $account;
+	    $output .= '" alt="';
+	    $output .= __('Click here to visit the Ustream channel');
+	    $output .= '" target="_blank"><img src="';
+	    $output .= $offline;
+	    $output .= '" alt="';
+	    $output .= __('Offline');
+	    $output .= '" /></a>';
+    } else {
+        $output = __('Error occured. We could not retrieve the data from Ustream.');
     }
-
-    return;
+    return $output;
 }
 
 // ============================================================

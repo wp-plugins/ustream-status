@@ -9,13 +9,13 @@ Tags: livecasting, status, ustream, live cast
 License: GPL2
 Requires at least: 2.8.0
 Tested up to: 4.3
-Stable tag: 2.0
+Stable tag: 2.0.2
 
 Display the online/offline status of a Ustream channel
 
 == Description ==
 
-"Ustream Status" is a widget plug-in to display the live/offline status of a Ustream channel, using the desired images.
+"Ustream Status" is a widget and shortcode plug-in to display the live/offline status of a Ustream channel, using the desired images.
 
 Enter a Ustream channel, and it will fetch the online/offline status. Then it will display the online/offline status image of your choice.
 
@@ -123,6 +123,10 @@ If you're still having problem getting the status, you can think of the followin
 1. Ustream Status in action
 
 == Changelog ==
+
+= 2.0.2 =
+
+* Fix shortcode output.
 
 = 2.0.1 =
 
